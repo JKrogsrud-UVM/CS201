@@ -1,0 +1,69 @@
+Bellman-Ford
+----- iteration 1 ---------------------
+N1: current min is 1073741823
+N1 new min: 7 by (N1, N5) w=7
+N2: current min is 1073741823
+N2 new min: 1073741819 by (N2, N4) w=-4
+N2 new min: 8 by (N2, N5) w=8
+N3: current min is 1073741823
+N3 new min: 1073741821 by (N3, N2) w=-2
+N4: current min is 1073741823
+N5: current min is 0
+----- iteration 2 ---------------------
+N1: current min is 7
+N2: current min is 8
+N3: current min is 1073741821
+N3 new min: 6 by (N3, N2) w=-2
+N4: current min is 1073741823
+N4 new min: 9 by (N4, N1) w=2
+N5: current min is 0
+----- iteration 3 ---------------------
+N1: current min is 7
+N2: current min is 8
+N2 new min: 5 by (N2, N4) w=-4
+N3: current min is 6
+N4: current min is 9
+N5: current min is 0
+----- iteration 4 ---------------------
+N1: current min is 7
+N2: current min is 5
+N3: current min is 6
+N3 new min: 3 by (N3, N2) w=-2
+N4: current min is 9
+N5: current min is 0
+----- iteration 5 ---------------------
+N1: current min is 7
+N2: current min is 5
+N3: current min is 3
+N4: current min is 9
+N5: current min is 0
+distance from N1 to N5: 7; first node is N5
+distance from N2 to N5: 5; first node is N4
+distance from N3 to N5: 3; first node is N2
+distance from N4 to N5: 9; first node is N1
+distance from N5 to N5: 0; first node is N0
+
+Bellman-Ford Push
+----- iteration 1 ---------------------
+*** N5 changed in the previous iteration
+new min for N1: 7 through N5
+new min for N2: 8 through N5
+----- iteration 2 ---------------------
+*** N1 changed in the previous iteration
+new min for N4: 9 through N1
+*** N2 changed in the previous iteration
+new min for N3: 6 through N2
+----- iteration 3 ---------------------
+*** N3 changed in the previous iteration
+*** N4 changed in the previous iteration
+new min for N2: 5 through N4
+----- iteration 4 ---------------------
+*** N2 changed in the previous iteration
+new min for N3: 3 through N2
+----- iteration 5 ---------------------
+*** N3 changed in the previous iteration
+distance from N1 to N5: 7; first node is N5
+distance from N2 to N5: 5; first node is N4
+distance from N3 to N5: 3; first node is N2
+distance from N4 to N5: 9; first node is N1
+distance from N5 to N5: 0; first node is N5
