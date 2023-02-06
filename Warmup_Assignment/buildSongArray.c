@@ -3,7 +3,7 @@
 
 #include <string.h>
 #include <stdlib.h>
-#include "warmup.jhibbele.h"
+#include "warmup.jkrogsru.h"
 
 #define NUMSONGS 10
 
@@ -54,3 +54,24 @@ int buildSongArray(Song **songArray_p, int *numSongs) {
 
   return 0;
 }
+
+Song *songArray;
+int numSongs;
+int doit = buildSongArray(&songArray, &numSongs);
+
+
+
+for (int index = 0; index < numSongs; index++)
+{
+    printf("%d): %s, %s, %d", index, songArray->title, songArray->artist, songArray->year);
+}
+
+// void qsort(void *base, size_t nitems, size_t size, int (*compar)(const void *, const void*))
+qsort(songArray, numSongs, sizeof(Song), compareSongs)
+
+for (int index = 0; index < numSongs; index++)
+{
+    printf("%d): %s, %s, %d", index, songArray->title, songArray->artist, songArray->year);
+}
+
+
